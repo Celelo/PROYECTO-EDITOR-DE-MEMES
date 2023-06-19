@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #788db1;
+}
+
+/* INICIO HEADER */
+header {
+    display: block;
+    width: 100%;
+    height: 120px;
+    background-color: #667b9e;
+    text-align: center;
+}
+
+.main-title {
+    padding: 15px 0px 20px 0px ;
+    font-size: 3em;
+}
+
+button {
+    margin-right: 10px;
+    font-size: 1.0em;
+}
+
+.clear-mode {
+    display: none;
+}
+/* FIN HEADER */
+
+/* INICIO DE CONTENIDO PRINCIPAL */
+main {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.conteiner-meme {
+    width: 40%;
+    height: 600px;
+}
+
+.meme {
+    width: 90%;
+    height: 550px;
+    margin: auto;
+    background-color: azure;
+}
+
+.button-img {
+    display: none;
+}
+
+.text-meme {
+    width: 100%;
+    height: 100px;
+    background-color: aqua;
+    padding-top: 30px;
+    font-size: 1.5em;
+}
+
+.img-meme {
+    height: 400px;
+    
+}
+
+/* FIN DE CONTENIDO PRINCIPAL */
