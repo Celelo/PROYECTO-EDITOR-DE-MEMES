@@ -17,6 +17,8 @@ header {
     height: 120px;
     background-color: #667b9e;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 .main-title {
@@ -35,39 +37,74 @@ button {
 /* FIN HEADER */
 
 /* INICIO DE CONTENIDO PRINCIPAL */
+.conteiner-global {
+    display: flex;
+    height: 600px;
+}
+
+
 main {
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
 }
 
 .conteiner-meme {
-    width: 40%;
+    display: flex;
+    width: 80%;
     height: 600px;
+    max-width: 600px;
+    justify-content: center;
+    background-color: aqua;
+    overflow: hidden;
 }
 
 .meme {
-    width: 90%;
-    height: 550px;
+    width: 100%;
+    height: 600px;
     margin: auto;
     background-color: azure;
 }
 
-.button-img {
-    display: none;
-}
+
 
 .text-meme {
     width: 100%;
     height: 100px;
-    background-color: aqua;
-    padding-top: 30px;
+    background-color: black;
+    color: white;
     font-size: 1.5em;
 }
 
 .img-meme {
-    height: 400px;
+    height: 320px;
     
 }
 
+.button-img {
+    width: 100px;
+    justify-content: center;
+    display: none;
+
+}
+
 /* FIN DE CONTENIDO PRINCIPAL */
+
+/* INICIO DE PANELES*/
+aside {
+    flex-grow: 0.3;
+}
+
+/* INICIO PANEL IMAGEN*/
+.panel-img {
+    width: 30%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    background-color: blue;
+}
+/* FIN PANEL IMAGEN*/
