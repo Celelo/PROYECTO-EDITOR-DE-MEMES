@@ -95,6 +95,9 @@ button {
 /* FIN DE CONTENIDO PRINCIPAL */
 
 /* INICIO DE PANELES*/
+aside {
+    overflow: auto;
+}
 
 /* INICIO PANEL IMAGEN*/
 .panel-img {
@@ -103,9 +106,10 @@ button {
     top: 0;
     z-index: 10;
     position: fixed;
-    background-color: rgb(182, 18, 155);
+    background-color: #5a509d;
     right: 0;
-    padding-left: 10px;
+    padding-left: 18px;
+    overflow-x: auto;
 }
 
 .tittle-img-panel {
@@ -114,9 +118,50 @@ button {
     font-size: 2em;
 }
 
-div[aria-label="url de imagen"] {
-   
+input[aria-label="url de imagen"] {
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    background-color: #393e49;
 }
 
+.style-color {
+    display: flex;
+    
+}
+
+.container-color {
+    display: flex;
+    width: 50%;
+    background-color: #393e49;
+    padding: 5px 0px;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+select[aria-label="modos de estilo de imagen"] {
+    border-radius: 5px;
+    background-color: #393e49;
+    border: 0;
+    width: 50%;
+    outline: none;
+    margin-right: 7px;
+}
+
+/* INICIO FILTROS */
+.tittle-filters {
+    margin: 13px 0px;
+}
+
+input[type="range"] {
+    width: 90%;
+    margin: 10px 0px;
+    background-color: #393e49;
+    cursor: pointer;
+}
+/* FIN FILTROS */
 
 /* FIN PANEL IMAGEN*/

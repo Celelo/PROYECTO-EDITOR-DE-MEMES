@@ -64,14 +64,14 @@
         <!-- FIN DE CONTENIDO PRINCIPAL -->
 
         <!-- INICIO DE PANELES -->
-        <aside class="conteiner-aside">
+        <aside>
             <!-- INICIO PANEL IMAGEN -->
             <section class="panel-img">
                 <h2 class="tittle-img-panel">
                     imagen
                 </h2>
                 <div class="container-url">
-                    <h3>
+                    <h3 class="tittle-url">
                         url
                     </h3>
                     <input type="text" aria-label="url de imagen">
@@ -80,11 +80,13 @@
                     <h3>
                         fondo
                     </h3>
-                    <div>
-                        <input type="color" value="#FFFFFF" aria-label="color de fondo de imagen">
-                        <span aria-hidden="true">
-                            #FFFFFF
-                        </span>
+                    <div class="style-color">
+                        <div class="container-color">
+                            <input type="color" value="#FFFFFF" aria-label="color de fondo de imagen">
+                            <span aria-hidden="true">
+                                #FFFFFF
+                            </span>
+                        </div>
                         <select aria-label="modos de estilo de imagen">
                             <option value="unset">Ninguno</option>
                             <option value="lighten">Aclarar</option>
@@ -97,7 +99,7 @@
                 </div>
                 <!-- INICIO FILTROS -->
                 <div>
-                    <h3>
+                    <h3 class="tittle-filters">
                         filtros
                     </h3>
                     <div>
@@ -143,6 +145,89 @@
             <!-- FIN PANEL IMAGEN -->
 
             <!-- INICIO PANEL TEXTO-->
+            <section>
+                <h2>
+                    texto
+                </h2>
+                <div>
+                    <h3>
+                        superior
+                    </h3>
+                    <!-- TEXTO -->
+                    <textarea aria-label="texto superior meme">
+                        TOP TEXT
+                    </textarea>
+                    <div>
+                        <input type="checkbox" id="off-top-text">
+                        <label for="off-top-text">
+                            sin texto superior
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input type="checkbox" id="off-bottom-text">
+                        <label for="off-bottom-text">
+                            sin texto inferior
+                        </label>
+                    </div>
+                </div>
+                <!-- FUENTE -->
+                <div>
+                    <h3>
+                        fuente
+                    </h3>
+                    <!-- fuentes familia -->
+                    <select aria-label="familia fuentes">
+                        <option value="arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="American Typewriter">American Typewriter</option>
+                        <option value="Andale Mono">Andale Mono</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Impact" selected>Impact</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <!-- tamaño de fuentes -->
+                    <div>
+                        <input type="number" name="tamaño fuentes" aria-label="tamaño fuentes">
+                    </div>
+                    <!-- alineacion de fuentes -->
+                    <div>
+                        <button aria-label="alineacion de texto a la izquierda">
+
+                        </button>
+                        <button aria-label="alineacion de texto al centro">
+
+                        </button>
+                        <button aria-label="alineacion de texto hacia la derecha"></button>
+                    </div>
+                </div>
+                <!-- color -->
+                <div>
+                    <div>
+                        <h3>
+                            COLOR
+                        </h3>
+                        <input name="color texto" aria-label="color texto" value="#000000">
+                        <span value="#000000" aria-hidden="true">#000000</span>
+                    </div>
+                    <!-- color fondo -->
+                    <div>
+                        <h3>
+                            FONDO
+                        </h3>
+                        <input name="color fondo" aria-label="color fondo" value="#ffffff">
+                        <span aria-hidden="true">#ffffff</span>
+                    </div>
+                    <!-- cheked fondo transparente-->
+                    <input type="checkbox" id="transparent-background">
+                    <label for="transparent-background">
+                        fondo transparente
+                    </label>
+                </div>
+            </section>
             <!-- FIN PANEL TEXTO-->
         </aside>
         <!-- FIN DE PANELES -->
