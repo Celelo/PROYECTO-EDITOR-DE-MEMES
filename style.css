@@ -29,6 +29,7 @@ header {
 button {
     margin-right: 10px;
     font-size: 1.0em;
+    cursor: pointer;
 }
 
 .clear-mode {
@@ -39,72 +40,83 @@ button {
 /* INICIO DE CONTENIDO PRINCIPAL */
 .conteiner-global {
     display: flex;
-    height: 600px;
+    flex-grow: 1;
 }
 
-
-main {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+.main-conteiner {
     flex-grow: 1;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .conteiner-meme {
-    display: flex;
-    width: 80%;
+    width: 100%;
     height: 600px;
-    max-width: 600px;
     justify-content: center;
-    background-color: aqua;
-    overflow: hidden;
+    max-width: 600px;
 }
 
 .meme {
     width: 100%;
     height: 600px;
-    margin: auto;
-    background-color: azure;
+    background-color: blue;
+    text-align: center;
+    justify-content: center;
 }
 
 
 
 .text-meme {
     width: 100%;
-    height: 100px;
-    background-color: black;
-    color: white;
-    font-size: 1.5em;
+    height: 90px;
+    background-color: white;
+    padding: 20px 0px;
+    font-weight: 900;
+    font-size: 2.7em;
 }
 
 .img-meme {
-    height: 320px;
+    height: 440px;
+    background-color: black;
     
 }
 
-.button-img {
-    width: 100px;
-    justify-content: center;
-    display: none;
-
+.button-dowload {
+    margin: 50px;
+    padding: 10px;
+    background-color: green;
+    border: 0;
+    color: white;
 }
 
 /* FIN DE CONTENIDO PRINCIPAL */
 
 /* INICIO DE PANELES*/
-aside {
-    flex-grow: 0.3;
-}
 
 /* INICIO PANEL IMAGEN*/
 .panel-img {
-    width: 30%;
+    width: 17%;
     height: 100%;
     top: 0;
     z-index: 10;
     position: fixed;
-    background-color: blue;
+    background-color: rgb(182, 18, 155);
+    right: 0;
+    padding-left: 10px;
 }
+
+.tittle-img-panel {
+    text-align: center;
+    margin: 20px;
+    font-size: 2em;
+}
+
+div[aria-label="url de imagen"] {
+   
+}
+
+
 /* FIN PANEL IMAGEN*/
