@@ -74,7 +74,7 @@
                     <h3 class="tittle-url">
                         url
                     </h3>
-                    <input type="text" aria-label="url de imagen">
+                    <input id="text-url" aria-label="url de imagen">
                 </div>
                 <div>
                     <h3>
@@ -82,7 +82,7 @@
                     </h3>
                     <div class="style-color">
                         <div class="container-color">
-                            <input type="color" value="#FFFFFF" aria-label="color de fondo de imagen">
+                            <input id="color-background-img" type="color" value="#FFFFFF" aria-label="color de fondo de imagen">
                             <span aria-hidden="true">
                                 #FFFFFF
                             </span>
@@ -198,7 +198,7 @@
                     </select>
                     <!-- tamaño de fuentes -->
                     <div class="size-position-fonts">
-                        <input type="number" name="tamaño fuentes" aria-label="tamaño fuentes">
+                        <input type="number" name="tamaño fuentes" aria-label="tamaño fuentes" id="font-size">
                         <!-- alineacion de fuentes -->
                         <div>
                             <button aria-label="alineacion de texto a la izquierda" class="buttons-alignment">
@@ -235,7 +235,7 @@
                             <div class="color-background">
                                 <input type="color" name="color fondo" aria-label="color fondo" value="#ffffff"
                                     id="color-background">
-                                <span id="color-background" aria-hidden="true">#FFFFFF</span>
+                                <span id="color-background-text" aria-hidden="true">#FFFFFF</span>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                     <h3>
                         espaciado
                     </h3>
-                    <input type="number" aria-label="espaciado" min="10" max="50" value="35">
+                    <input type="number" aria-label="espaciado" min="10" max="50" value="35" id="spacing-text">
                 </div>
                 <!-- interlineado -->
                 <div>
