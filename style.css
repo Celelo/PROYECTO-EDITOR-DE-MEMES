@@ -7,19 +7,36 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #788db1;
 }
+
+/* inicio modo oscuro/claro */
+body[class*="body-white"] {
+    background-color: #a2afc5;
+}
+
+.body-black {
+    background-color: #39527e;
+}
+/* fin modo oscuro/claro */
 
 /* INICIO HEADER */
 header {
     display: block;
     width: 100%;
     height: 120px;
-    background-color: #667b9e;
     text-align: center;
     position: sticky;
     top: 0;
 }
+/* inicio modo oscuro/claro */
+header[class*="header-white"] {
+    background-color: #c3cad6;
+}
+
+.header-black {
+    background-color: #556a8d;
+} 
+/* fin modo oscuro/claro */
 
 .main-title {
     padding: 15px 0px 20px 0px;
@@ -33,7 +50,7 @@ button {
 }
 
 .clear-mode {
-    display: none;
+    
 }
 
 /* FIN HEADER */
@@ -81,9 +98,14 @@ button {
 
 .img-meme {
     height: 440px;
-    background-color: black;
-
+    background-color: rgb(8, 8, 8);
+    background-size: cover;
+    background-repeat : no-repeat;
+    background-position: center;
 }
+
+
+
 
 .button-dowload {
     margin: 50px;
@@ -96,9 +118,32 @@ button {
 /* FIN DE CONTENIDO PRINCIPAL */
 
 /* INICIO DE PANELES*/
+.hidden {
+    display: none;
+}
+
+.aside {
+    width: 17%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    padding: 0px 10px;
+    overflow-x: auto;
+}
+/* inicio modo oscuro/claro de imagen y texto*/
+.aside-white {
+    background-color: #837ea3;
+} 
+
+aside-black {
+    background-color: #4b3f97;
+}
+/* fin modo oscuro/claro imagen y texto*/
 
 /* INICIO PANEL IMAGEN*/
-.panel-img {
+/* .panel-img {
     width: 17%;
     height: 100%;
     top: 0;
@@ -108,7 +153,7 @@ button {
     right: 0;
     padding: 0px 10px;
     overflow-x: auto;
-}
+} */
 
 .tittle-img-panel {
     text-align: center;
@@ -177,7 +222,7 @@ input[type="range"] {
 /* FIN PANEL IMAGEN*/
 
 /* INICIO PANEL TEXTO */
-.panel-text {
+/* .panel-text {
     width: 17%;
     height: 100%;
     top: 0;
@@ -187,7 +232,7 @@ input[type="range"] {
     left: 0;
     padding: 0px 10px;
     overflow-x: auto;
-}
+}  */
 
 .tittle-text-panel {
     text-align: center;
@@ -305,7 +350,7 @@ label[ for="transparent-background"] {
 
 /* espaciado */
 .container-spacing {
-    margin: 10px 0px; 
+    margin: 10px 0px;
 }
 input[aria-label="espaciado"] {
     width: 100%;

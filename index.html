@@ -11,27 +11,27 @@
     <!-- FIN ICONOS -->
 </head>
 
-<body>
+<body class="body-white body-black" id="body-mods-colors">
     <!-- INICIO HEADER -->
-    <header>
+    <header class=" header header-white header-black" id="header-mods-colors">
         <h1 class="main-title">
             generador de memes
         </h1>
         <!-- INICIO BOTONES -->
         <div class="conteiner-buttons">
-            <button>
+            <button id="button-img-menu">
                 <i class="fa-regular fa-file-image fa-shake"></i>
                 imagen
             </button>
-            <button>
+            <button id="button-text-menu">
                 <i class="fa-solid fa-font fa-shake"></i>
                 texto
             </button>
-            <button>
+            <button id="button-black">
                 <i class="fa-regular fa-lightbulb fa-shake"></i>
                 modo oscuro
             </button>
-            <button class="clear-mode">
+            <button class="clear-mode" id="button-white">
                 <i class="fa-solid fa-lightbulb fa-shake"></i>
                 modo claro
             </button>
@@ -48,9 +48,7 @@
                     <p class="text-meme">
                         top text
                     </p>
-                    <div class="img-meme">
-                        img
-                    </div>
+                    <div class="img-meme" id="meme-img"></div>
                     <p class="text-meme">
                         button text
                     </p>
@@ -66,7 +64,7 @@
         <!-- INICIO DE PANELES -->
         <aside>
             <!-- INICIO PANEL IMAGEN -->
-            <section class="panel-img">
+            <section class="aside aside-white aside-black" id="panel-img">
                 <h2 class="tittle-img-panel">
                     imagen
                 </h2>
@@ -74,7 +72,7 @@
                     <h3 class="tittle-url">
                         url
                     </h3>
-                    <input id="text-url" aria-label="url de imagen">
+                    <input id="meme-url" aria-label="url de imagen">
                 </div>
                 <div>
                     <h3>
@@ -145,7 +143,7 @@
             <!-- FIN PANEL IMAGEN -->
 
             <!-- INICIO PANEL TEXTO-->
-            <section class="panel-text">
+            <section class="aside hidden aside-white aside-black" id="panel-text">
                 <h2 class="tittle-text-panel">
                     texto
                 </h2>
