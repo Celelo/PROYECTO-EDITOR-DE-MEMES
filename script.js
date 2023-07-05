@@ -98,29 +98,26 @@ botonWhite.addEventListener('click', () => modWhite())
 const inputColorBackgroud = document.getElementById('color-background-img')
 
 // INICIO FILTROS 
-const inputGlow = document.getElementById('range-glow')
+const inputBrightness = document.getElementById('range-glow')
 const inputOpacity = document.getElementById('range-opacity')
-const inputContrast = document.getElementById('range-contrast')
-const inputBlur = document.getElementById('range-blur')
-const inputRangeGrayScale = document.getElementById('range-gray-scale')
-const inputSepia = document.getElementById('range-sepia')
-const inputHue = document.getElementById('range-hue')
-const inputCrowded = document.getElementById('range-crowded')
-const inputNegative = document.getElementById('range-negative')
+// const inputContrast = document.getElementById('range-contrast')
+// const inputBlur = document.getElementById('range-blur')
+// const inputRangeGrayScale = document.getElementById('range-gray-scale')
+// const inputSepia = document.getElementById('range-sepia')
+// const inputHue = document.getElementById('range-hue')
+// const inputCrowded = document.getElementById('range-crowded')
+// const inputNegative = document.getElementById('range-negative')
 
 
-const filtersInputs = (e) => {
-    // console.log('e.target.value')
-    imgMeme.style.filter = `brightness${inputGlow.value} opacity(1) blur(0px) contrast(100%) grayscale(0%) hue-rotate(0deg) sepia(0%) saturate(100%) invert(0`
+
+const filters = () => {
+    // console.log(e.target.value)
+    imgMeme.style.filter = (`brightness${inputBrightness.value} opacity(1) blur(0px) contrast(100%) grayscale(0%) hue-rotate(0deg) sepia(0%) saturate(100%) invert(0)`)
 }
 
-console.log(inputGlow.value)
+inputBrightness.addEventListener('input', () => filters())
+inputOpacity.addEventListener('input', (e) => filters(e))
 
-// const filters = (e) => {
-//     console.log(e.target.value)
-// }
-
-inputGlow.addEventListener('input', () => filtersInputs())
 
 //FIN PANEL IMAGEN 
 
