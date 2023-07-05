@@ -1,7 +1,7 @@
 
 //inicio cambio de panel imagen y texto por boton 
 
- // boton img y texto
+// boton img y texto
 const buttonImgMenu = document.getElementById('button-img-menu');
 
 const buttonTextMenu = document.getElementById('button-text-menu');
@@ -50,6 +50,9 @@ inputUrl.addEventListener('input', () => changeBackground())
 
 // fin de imagen meme e input URL
 
+
+
+
 // inicio de modo oscuro/claro
 
 //header
@@ -67,57 +70,87 @@ const modBlack = () => {
     sectionText.classList.remove('aside-white')
     sectionImg.classList.add('aside-black')
     sectionText.classList.add('aside-black')
+    botonBlack.classList.add('hide-button')
+    botonWhite.classList.remove('hide-button')
 }
 
+const modWhite = () => {
+    modHeader.classList.add('header-white')
+    modHeader.classList.remove('header-black')
+    modBody.classList.add('body-white')
+    modBody.classList.remove('body-black')
+    sectionImg.classList.add('aside-white')
+    sectionText.classList.add('aside-white')
+    sectionImg.classList.remove('aside-black')
+    sectionText.classList.remove('aside-black')
+    botonBlack.classList.remove('hide-button')
+    botonWhite.classList.add('hide-button')
 
+}
 
 botonBlack.addEventListener('click', () => modBlack())
+
+botonWhite.addEventListener('click', () => modWhite())
 
 // fin de modo oscuro/claro
 
 
-const inputColorBackgroud = document.getElementById('colorbackgroundimg')
+const inputColorBackgroud = document.getElementById('color-background-img')
 
 // INICIO FILTROS 
-const inputGlow = document.getElementById('rangeglow')
-const imputOpacity = document.getElementById('rangeopacity')
-const inputContrast = document.getElementById('rangecontrast')
-const inputBlur = document.getElementById('rangeblur')
-const inputRangeGrayScale = document.getElementById('rangegrayscale')
-const inputSepia = document.getElementById('rangesepia')
-const inputHue = document.getElementById('rangehue')
-const inputCrowded = document.getElementById('rangecrowded')
-const inputNegative  = document.getElementById('rangenegative')
+const inputGlow = document.getElementById('range-glow')
+const inputOpacity = document.getElementById('range-opacity')
+const inputContrast = document.getElementById('range-contrast')
+const inputBlur = document.getElementById('range-blur')
+const inputRangeGrayScale = document.getElementById('range-gray-scale')
+const inputSepia = document.getElementById('range-sepia')
+const inputHue = document.getElementById('range-hue')
+const inputCrowded = document.getElementById('range-crowded')
+const inputNegative = document.getElementById('range-negative')
+
+
+const filtersInputs = (e) => {
+    // console.log('e.target.value')
+    imgMeme.style.filter = `brightness${inputGlow.value} opacity(1) blur(0px) contrast(100%) grayscale(0%) hue-rotate(0deg) sepia(0%) saturate(100%) invert(0`
+}
+
+console.log(inputGlow.value)
+
+// const filters = (e) => {
+//     console.log(e.target.value)
+// }
+
+inputGlow.addEventListener('input', () => filtersInputs())
 
 //FIN PANEL IMAGEN 
 
 //INICIO PANEL TEXTO
 
 //texto superior
-const inputOffTopText = document.getElementById('offtoptext')
+const inputOffTopText = document.getElementById('off-top-text')
 
 
 //texto inferior 
-const inputOffBottomText = document.getElementById('offbottomtext')
+const inputOffBottomText = document.getElementById('off-bottom-text')
 
 
 //tamaño de fuente 
-const inputFontSize = document.getElementById('fontsize')
+const inputFontSize = document.getElementById('font-size')
 
 
 //color texto
-const inputTextColor = document.getElementById('textcolor')
+const inputTextColor = document.getElementById('text-color')
 
 //color fondo 
-const inputColorBackgroudText = document.getElementById('colorbackgroundtext')
+const inputColorBackgroudText = document.getElementById('color-background-text')
 
 
 //cheked fondo transparente 
-const inputTransparentBackground = document.getElementById('transparentbackground')
+const inputTransparentBackground = document.getElementById('transparent-background')
 
 
 //espaciado
-const inputSpacing = document.getElementById('spacingtext')
+const inputSpacing = document.getElementById('spacing-text')
 
 //FIN PANEL TEXTO
 
