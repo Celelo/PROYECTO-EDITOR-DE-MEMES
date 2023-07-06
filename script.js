@@ -100,36 +100,49 @@ const inputColorBackgroud = document.getElementById('color-background-img')
 // INICIO FILTROS 
 const inputBrightness = document.getElementById('range-glow')
 const inputOpacity = document.getElementById('range-opacity')
-// const inputContrast = document.getElementById('range-contrast')
-// const inputBlur = document.getElementById('range-blur')
-// const inputRangeGrayScale = document.getElementById('range-gray-scale')
-// const inputSepia = document.getElementById('range-sepia')
-// const inputHue = document.getElementById('range-hue')
-// const inputCrowded = document.getElementById('range-crowded')
-// const inputNegative = document.getElementById('range-negative')
+const inputContrast = document.getElementById('range-contrast')
+const inputBlur = document.getElementById('range-blur')
+const inputRangeGrayScale = document.getElementById('range-gray-scale')
+const inputSepia = document.getElementById('range-sepia')
+const inputHue = document.getElementById('range-hue')
+const inputCrowded = document.getElementById('range-crowded')
+const inputNegative = document.getElementById('range-negative')
 
 
 
 const filters = () => {
-    // console.log(e.target.value)
-    imgMeme.style.filter = (`brightness${inputBrightness.value} opacity(1) blur(0px) contrast(100%) grayscale(0%) hue-rotate(0deg) sepia(0%) saturate(100%) invert(0)`)
+    imgMeme.style.filter = (`brightness(${inputBrightness.value}) opacity(${inputOpacity.value}) blur(${inputBlur.value}px) contrast(${inputContrast.value}%) grayscale(${inputRangeGrayScale.value}%) hue-rotate(${inputHue.value}deg) sepia(${inputSepia.value}%) saturate(${inputCrowded.value}%) invert(${inputNegative.value})`);
 }
 
 inputBrightness.addEventListener('input', () => filters())
-inputOpacity.addEventListener('input', (e) => filters(e))
+inputOpacity.addEventListener('input', () => filters())
+inputContrast.addEventListener('input', () => filters())
+inputBlur.addEventListener('input', () => filters())
+inputRangeGrayScale.addEventListener('input', () => filters())
+inputSepia.addEventListener('input', () => filters())
+inputHue.addEventListener('input', () => filters())
+inputCrowded.addEventListener('input', () => filters())
+inputNegative.addEventListener('input', () => filters())
 
 
 //FIN PANEL IMAGEN 
 
 //INICIO PANEL TEXTO
 
-//texto superior
+//texto superior e inferior
 const inputOffTopText = document.getElementById('off-top-text')
-
-
-//texto inferior 
 const inputOffBottomText = document.getElementById('off-bottom-text')
+const textTop = document.getElementById('text-top')
+const textBottom = document.getElementById('text-bottom')
 
+const hideBotomText = () => {
+    console.log(inputOffBottomText.Checked);
+    if (inputOffBottomText.Checked) {
+        textBottom.classList.add('hidden');
+    } else {
+        textBottom.classList.remove('hidden')
+    }
+};
 
 //tamaño de fuente 
 const inputFontSize = document.getElementById('font-size')
