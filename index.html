@@ -45,13 +45,17 @@
         <main class="main-conteiner">
             <div class="conteiner-meme">
                 <div class="meme">
-                    <p class="text-meme">
-                        top text
-                    </p>
+                    <div id="container-top-text">
+                        <p class="text-meme" id="top-text">
+                            top text
+                        </p>
+                    </div>
                     <div class="img-meme" id="meme-img"></div>
-                    <p class="text-meme">
-                        button text
-                    </p>
+                    <div id="container-bottom-text">
+                        <p class="text-meme" id="bottom-text">
+                            button text
+                        </p>
+                    </div>
                 </div>
                 <button class="button-dowload">
                     <i class="fa-solid fa-download fa-shake"></i>
@@ -82,7 +86,7 @@
                         <div class="container-color">
                             <input id="color-background-img" type="color" value="#FFFFFF"
                                 aria-label="color de fondo de imagen">
-                            <span aria-hidden="true">
+                            <span aria-hidden="true" id="span-color">
                                 #FFFFFF
                             </span>
                         </div>
@@ -223,7 +227,7 @@
                             <div class="color-text">
                                 <input type="color" name="color texto" aria-label="color texto" value="#000000"
                                     id="text-color">
-                                <span id="text-color" aria-hidden="true">#000000</span>
+                                <span id="span-text-color" aria-hidden="true">#000000</span>
                             </div>
                         </div>
                         <!-- color fondo -->
@@ -234,7 +238,7 @@
                             <div class="color-background">
                                 <input type="color" name="color fondo" aria-label="color fondo" value="#ffffff"
                                     id="color-background-text">
-                                <span id="color-background-text" aria-hidden="true">#FFFFFF</span>
+                                <span id="span-background-text" aria-hidden="true">#FFFFFF</span>
                             </div>
                         </div>
                     </div>

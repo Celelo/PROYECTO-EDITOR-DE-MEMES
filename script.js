@@ -94,8 +94,17 @@ botonWhite.addEventListener('click', () => modWhite())
 
 // fin de modo oscuro/claro
 
-
+// inicio color fondo imagen
 const inputColorBackgroud = document.getElementById('color-background-img')
+const spanColor = document.getElementById('span-color')
+
+const fondoMeme = () => {
+    console.log(inputColorBackgroud.value)   
+    spanColor.innerHTML = `${inputColorBackgroud.value}`
+}
+
+inputColorBackgroud.addEventListener('input', () => fondoMeme())
+// fin color fondo imagen
 
 // INICIO FILTROS 
 const inputBrightness = document.getElementById('range-glow')
@@ -148,12 +157,35 @@ const hideBotomText = () => {
 const inputFontSize = document.getElementById('font-size')
 
 
-//color texto
+// inicio color texto y color en fondo del texto meme
 const inputTextColor = document.getElementById('text-color')
+const spanColorText = document.getElementById('span-text-color')
+const backgroundTextTop = document.getElementById('container-top-text')
+const backgroundTextBottom = document.getElementById('container-bottom-text')
+let color;
 
-//color fondo 
+
+const inputColorText = (e) => {
+        console.log(inputTextColor.value)
+        spanColorText.innerHTML = `${inputTextColor.value}`
+    }
+
+inputTextColor.addEventListener('input', () => inputColorText())
+
+// fin color texto
+
+// inicio color fondo 
 const inputColorBackgroudText = document.getElementById('color-background-text')
+const inputBackgroundText = document.getElementById('span-background-text')
 
+
+const inputColorBackgroundText = () => {
+    console.log(inputColorBackgroudText.value)
+    inputBackgroundText.innerHTML = `${inputColorBackgroudText.value}`
+}
+
+inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText())
+// fin color fondo 
 
 //cheked fondo transparente 
 const inputTransparentBackground = document.getElementById('transparent-background')
