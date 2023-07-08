@@ -156,21 +156,44 @@ const hideBotomText = () => {
 //tamaño de fuente 
 const inputFontSize = document.getElementById('font-size')
 
+// inicio de descarga meme por boton
+const meme = document.getElementById('container-meme')
+const botonDowload = document.getElementById('dowload')
+
+const downloadMeme = () => {
+    domtoimage.toBlob(meme).then(function (blob) {
+        window.saveAs(blob, "mi-meme.png");
+    });
+};
+
+botonDowload.addEventListener('click', () => downloadMeme())
+// fin de descarga meme por boton
+
+// inicio de font family
+const fontSelector = document.getElementById('font-selector')
+const changeFontFamily = () => {
+    topText.style.fontFamily = `${fontSelector.value}`
+}
+
+fontSelector.addEventListener('change', () => changeFontFamily())
+// fin de font family
 
 // inicio color texto y color en fondo del texto meme
 const inputTextColor = document.getElementById('text-color')
 const spanColorText = document.getElementById('span-text-color')
-const backgroundTextTop = document.getElementById('container-top-text')
-const backgroundTextBottom = document.getElementById('container-bottom-text')
+const topText = document.getElementById('container-top-text')
+const bottomText = document.getElementById('container-bottom-text')
 let color;
 
 
 const inputColorText = (e) => {
-        console.log(inputTextColor.value)
+        // console.log(inputTextColor.value)
         spanColorText.innerHTML = `${inputTextColor.value}`
-    }
+        color.style.background = 
+        console.log(color.value)
+}
 
-inputTextColor.addEventListener('input', () => inputColorText())
+inputTextColor.addEventListener('input', () => inputColorText(color))
 
 // fin color texto
 

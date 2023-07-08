@@ -9,6 +9,15 @@
     <!-- INICIO ICONOS -->
     <script src="https://kit.fontawesome.com/d47b1f1b61.js" crossorigin="anonymous"></script>
     <!-- FIN ICONOS -->
+
+    <!-- INICIO DE DESCARGA MEME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- FIN DE DESCARGA MEME -->
 </head>
 
 <body class="body-white body-black" id="body-mods-colors">
@@ -44,7 +53,7 @@
         <!-- INICIO DE CONTENIDO PRINCIPAL -->
         <main class="main-conteiner">
             <div class="conteiner-meme">
-                <div class="meme">
+                <div class="meme" id="container-meme">
                     <div id="container-top-text">
                         <p class="text-meme" id="top-text">
                             top text
@@ -57,7 +66,7 @@
                         </p>
                     </div>
                 </div>
-                <button class="button-dowload">
+                <button class="button-dowload" id="dowload">
                     <i class="fa-solid fa-download fa-shake"></i>
                     descargar imagen
                 </button>
@@ -188,8 +197,8 @@
                         fuente
                     </h3>
                     <!-- fuentes familia -->
-                    <select aria-label="familia fuentes">
-                        <option value="arial">Arial</option>
+                    <select aria-label="familia fuentes" id="font-selector">
+                        <option value="Arial, Helvetica, sans-serif;">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
                         <option value="Andale Mono">Andale Mono</option>
