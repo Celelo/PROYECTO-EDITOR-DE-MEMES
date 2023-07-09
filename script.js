@@ -1,18 +1,12 @@
 
 //inicio cambio de panel imagen y texto por boton 
 
-// boton img y texto
 const buttonImgMenu = document.getElementById('button-img-menu');
-
 const buttonTextMenu = document.getElementById('button-text-menu');
-
-//sections img y text
 const sectionImg = document.getElementById('panel-img');
-
 const sectionText = document.getElementById('panel-text');
 
 
-//event handler de img y text 
 const hideTextSection = () => {
     sectionText.classList.remove('hidden')
     sectionImg.classList.add('hidden')
@@ -25,7 +19,6 @@ const hideImgSection = () => {
 }
 
 
-// event listener de img y text
 buttonImgMenu.addEventListener('click', () => hideImgSection())
 
 buttonTextMenu.addEventListener('click', () => hideTextSection())
@@ -55,7 +48,6 @@ inputUrl.addEventListener('input', () => changeBackground())
 
 // inicio de modo oscuro/claro
 
-//header
 const modHeader = document.getElementById('header-mods-colors')
 const modBody = document.getElementById('body-mods-colors')
 const botonWhite = document.getElementById('button-white')
@@ -94,19 +86,8 @@ botonWhite.addEventListener('click', () => modWhite())
 
 // fin de modo oscuro/claro
 
-// inicio color fondo imagen
-const inputColorBackgroud = document.getElementById('color-background-img')
-const spanColor = document.getElementById('span-color')
 
-const fondoMeme = () => {
-    console.log(inputColorBackgroud.value)   
-    spanColor.innerHTML = `${inputColorBackgroud.value}`
-}
-
-inputColorBackgroud.addEventListener('input', () => fondoMeme())
-// fin color fondo imagen
-
-// INICIO FILTROS 
+// inicio de filtros
 const inputBrightness = document.getElementById('range-glow')
 const inputOpacity = document.getElementById('range-opacity')
 const inputContrast = document.getElementById('range-contrast')
@@ -133,16 +114,35 @@ inputHue.addEventListener('input', () => filters())
 inputCrowded.addEventListener('input', () => filters())
 inputNegative.addEventListener('input', () => filters())
 
+//fin de filtros
+
+
+// inicio de nombre input en  span del color fondo imagen
+const inputColorBackgroud = document.getElementById('color-background-img')
+const spanColor = document.getElementById('span-color')
+
+const fondoMeme = () => {
+    console.log(inputColorBackgroud.value)   
+    spanColor.innerHTML = `${inputColorBackgroud.value}`
+}
+ //elejir color del fondo de la imagen
+inputColorBackgroud.addEventListener('input', () => fondoMeme()); {
+    inputColorBackgroud.oninput = () => {
+        imgMeme.style.background = `${inputColorBackgroud.value}`
+    }
+}
+// fin de nombre span del color fondo imagen
+
 
 //FIN PANEL IMAGEN 
 
 //INICIO PANEL TEXTO
 
-//texto superior e inferior
+// inicio desaparecer texto superior e inferior
 const inputOffTopText = document.getElementById('off-top-text')
 const inputOffBottomText = document.getElementById('off-bottom-text')
-const textTop = document.getElementById('text-top')
-const textBottom = document.getElementById('text-bottom')
+const inputTextTop = document.getElementById('text-top')
+const inputTextBottom = document.getElementById('text-bottom')
 
 const hideBotomText = () => {
     console.log(inputOffBottomText.Checked);
@@ -152,9 +152,15 @@ const hideBotomText = () => {
         textBottom.classList.remove('hidden')
     }
 };
+// fin desaparecer texto superior e inferior
+
+
+
 
 //tamaño de fuente 
 const inputFontSize = document.getElementById('font-size')
+
+
 
 // inicio de descarga meme por boton
 const meme = document.getElementById('container-meme')
@@ -169,36 +175,47 @@ const downloadMeme = () => {
 botonDowload.addEventListener('click', () => downloadMeme())
 // fin de descarga meme por boton
 
+
+
 // inicio de font family
 const fontSelector = document.getElementById('font-selector')
 const changeFontFamily = () => {
-    topText.style.fontFamily = `${fontSelector.value}`
+    containerTopText.style.fontFamily = `${fontSelector.value}`
 }
 
 fontSelector.addEventListener('change', () => changeFontFamily())
 // fin de font family
 
-// inicio color texto y color en fondo del texto meme
+
+
+// inicio de nombre input en span del color texto
 const inputTextColor = document.getElementById('text-color')
 const spanColorText = document.getElementById('span-text-color')
-const topText = document.getElementById('container-top-text')
-const bottomText = document.getElementById('container-bottom-text')
-let color;
+const containerTopText = document.getElementById('container-top-text')
+const containerBottomText = document.getElementById('container-bottom-text')
+const topText = document.getElementById('top-text')
+const bottomText = document.getElementById('bottom-text')
 
 
-const inputColorText = (e) => {
+const inputColorText = () => {
         // console.log(inputTextColor.value)
         spanColorText.innerHTML = `${inputTextColor.value}`
-        color.style.background = 
-        console.log(color.value)
 }
 
-inputTextColor.addEventListener('input', () => inputColorText(color))
+inputTextColor.addEventListener('input', () => inputColorText()); {
+    inputTextColor.oninput = () => {
+        topText.style.color = `${inputTextColor.value}`
+        bottomText.style.color = `${inputTextColor.value}`
+    }
+}
+// fin color de nombre input en span del color texto 
 
-// fin color texto
 
-// inicio color fondo 
-const inputColorBackgroudText = document.getElementById('color-background-text')
+
+
+
+// inicio de nombre input en span del color fondo en texto 
+const inputColorBackgroudText = document.getElementById('color-background-text') 
 const inputBackgroundText = document.getElementById('span-background-text')
 
 
@@ -206,9 +223,31 @@ const inputColorBackgroundText = () => {
     console.log(inputColorBackgroudText.value)
     inputBackgroundText.innerHTML = `${inputColorBackgroudText.value}`
 }
+//elejir color de fondo del texto 
+inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText()); {
+    inputColorBackgroudText.oninput = () => {
+        containerTopText.style.background = `${inputColorBackgroudText.value}`
+        containerBottomText.style.background = `${inputColorBackgroudText.value}`
+    }
+    
+}  
+// fin de nombre input en span del color fondo en texto
 
-inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText())
-// fin color fondo 
+
+
+// inicio de escribir texto top y bottom
+
+inputTextTop.oninput = () => {
+    topText.innerHTML = `${inputTextTop.value}`
+}
+
+inputTextBottom.oninput = () => {
+        bottomText.innerHTML = `${inputTextBottom.value}`
+    }
+
+// fin de escribir texto top y bottom
+
+
 
 //cheked fondo transparente 
 const inputTransparentBackground = document.getElementById('transparent-background')
