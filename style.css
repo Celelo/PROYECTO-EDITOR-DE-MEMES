@@ -98,7 +98,7 @@ button:hover {
 
 
 
-.text-meme {
+div[class*="text-meme"] {
     width: 100%;
     height: 90px;
     background-color: white;
@@ -292,7 +292,6 @@ input[type="color"]::-webkit-color-swatch-wrapper {
     padding: 30%;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }
 
 input[type="color"]::-webkit-color-swatch {
@@ -301,6 +300,11 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 50%;
     border: none;
     background-color: transparent;
+}
+
+input[type="color"] {
+    background-color: transparent;
+    border: none;
 }
 
 

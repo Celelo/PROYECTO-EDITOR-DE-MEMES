@@ -141,17 +141,28 @@ inputColorBackgroud.addEventListener('input', () => fondoMeme()); {
 // inicio desaparecer texto superior e inferior
 const inputOffTopText = document.getElementById('off-top-text')
 const inputOffBottomText = document.getElementById('off-bottom-text')
-const inputTextTop = document.getElementById('text-top')
-const inputTextBottom = document.getElementById('text-bottom')
 
-const hideBotomText = () => {
-    console.log(inputOffBottomText.Checked);
-    if (inputOffBottomText.Checked) {
-        textBottom.classList.add('hidden');
+const hideTopText = () => {
+    console.log(inputOffTopText.checked);
+    if (inputOffTopText.checked) {
+        containerTopText.classList.add('hidden')
     } else {
-        textBottom.classList.remove('hidden')
+        containerTopText.classList.remove('hidden')
     }
-};
+}
+
+inputOffTopText.addEventListener('change', () => hideTopText())
+
+const hideBottomText = () => {
+    console.log(inputOffBottomText.checked);
+    if (inputOffBottomText.checked) {
+        containerBottomText.classList.add('hidden')
+    } else {
+        containerBottomText.classList.remove('hidden')
+    }
+}
+
+inputOffBottomText.addEventListener('change', () => hideBottomText())
 // fin desaparecer texto superior e inferior
 
 
@@ -188,7 +199,7 @@ fontSelector.addEventListener('change', () => changeFontFamily())
 
 
 
-// inicio de nombre input en span del color texto
+// inicio de nombre input en span del color texto                **********************************************************
 const inputTextColor = document.getElementById('text-color')
 const spanColorText = document.getElementById('span-text-color')
 const containerTopText = document.getElementById('container-top-text')
@@ -236,7 +247,8 @@ inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText
 
 
 // inicio de escribir texto top y bottom
-
+const inputTextTop = document.getElementById('text-top')
+const inputTextBottom = document.getElementById('text-bottom')
 inputTextTop.oninput = () => {
     topText.innerHTML = `${inputTextTop.value}`
 }
