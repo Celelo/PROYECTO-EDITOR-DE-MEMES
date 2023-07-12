@@ -5,24 +5,37 @@ const buttonImgMenu = document.getElementById('button-img-menu');
 const buttonTextMenu = document.getElementById('button-text-menu');
 const sectionImg = document.getElementById('panel-img');
 const sectionText = document.getElementById('panel-text');
+const inputXText = document.getElementById('input-x-text')
+const inputXImg = document.getElementById('input-x-img')
 
 
 const hideTextSection = () => {
     sectionText.classList.remove('hidden')
     sectionImg.classList.add('hidden')
+    sectionText.classList.remove('hidden-panel')
 }
 
 
 const hideImgSection = () => {
     sectionImg.classList.remove('hidden')
     sectionText.classList.add('hidden')
+    sectionImg.classList.remove('hidden-panel')
 }
 
 
-buttonImgMenu.addEventListener('click', () => hideImgSection())
+buttonImgMenu.addEventListener('click', () => hideImgSection());
 
-buttonTextMenu.addEventListener('click', () => hideTextSection())
+buttonTextMenu.addEventListener('click', () => hideTextSection());
 
+
+//paneles responsive
+inputXImg.addEventListener('input', () => {
+    sectionImg.classList.add('hidden-panel')
+});
+
+inputXText.addEventListener('input', () => {
+    sectionText.classList.add('hidden-panel')
+});
 //fin cambio de panel imagen y texto por boton 
 
 
@@ -122,10 +135,10 @@ const inputColorBackgroud = document.getElementById('color-background-img')
 const spanColor = document.getElementById('span-color')
 
 const fondoMeme = () => {
-    console.log(inputColorBackgroud.value)   
+    console.log(inputColorBackgroud.value)
     spanColor.innerHTML = `${inputColorBackgroud.value}`
 }
- //elejir color del fondo de la imagen
+//elejir color del fondo de la imagen
 inputColorBackgroud.addEventListener('input', () => fondoMeme()); {
     inputColorBackgroud.oninput = () => {
         imgMeme.style.background = `${inputColorBackgroud.value}`
@@ -133,6 +146,17 @@ inputColorBackgroud.addEventListener('input', () => fondoMeme()); {
 }
 // fin de nombre span del color fondo imagen
 
+
+// inicio de filtros para imagen meme 
+const filtersMemeSelector = document.getElementById('modes-style-img')
+
+const filtersImg = () => {
+    imgMeme.style.backgroundBlendMode = `${filtersMemeSelector.value}`
+}
+
+filtersMemeSelector.addEventListener('change', () => filtersImg())
+
+// fin de filtros para imagen meme
 
 //FIN PANEL IMAGEN 
 
@@ -188,8 +212,10 @@ botonDowload.addEventListener('click', () => downloadMeme())
 
 
 
-// inicio de font family
+// inicio de font family                                            **********************************************************
+const inputTextColor = document.getElementById('text-color')
 const fontSelector = document.getElementById('font-selector')
+
 const changeFontFamily = () => {
     containerTopText.style.fontFamily = `${fontSelector.value}`
 }
@@ -199,8 +225,7 @@ fontSelector.addEventListener('change', () => changeFontFamily())
 
 
 
-// inicio de nombre input en span del color texto                **********************************************************
-const inputTextColor = document.getElementById('text-color')
+// inicio de nombre input en span del color texto                
 const spanColorText = document.getElementById('span-text-color')
 const containerTopText = document.getElementById('container-top-text')
 const containerBottomText = document.getElementById('container-bottom-text')
@@ -209,8 +234,8 @@ const bottomText = document.getElementById('bottom-text')
 
 
 const inputColorText = () => {
-        // console.log(inputTextColor.value)
-        spanColorText.innerHTML = `${inputTextColor.value}`
+    // console.log(inputTextColor.value)
+    spanColorText.innerHTML = `${inputTextColor.value}`
 }
 
 inputTextColor.addEventListener('input', () => inputColorText()); {
@@ -226,7 +251,7 @@ inputTextColor.addEventListener('input', () => inputColorText()); {
 
 
 // inicio de nombre input en span del color fondo en texto 
-const inputColorBackgroudText = document.getElementById('color-background-text') 
+const inputColorBackgroudText = document.getElementById('color-background-text')
 const inputBackgroundText = document.getElementById('span-background-text')
 
 
@@ -240,8 +265,8 @@ inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText
         containerTopText.style.background = `${inputColorBackgroudText.value}`
         containerBottomText.style.background = `${inputColorBackgroudText.value}`
     }
-    
-}  
+
+}
 // fin de nombre input en span del color fondo en texto
 
 
@@ -254,8 +279,8 @@ inputTextTop.oninput = () => {
 }
 
 inputTextBottom.oninput = () => {
-        bottomText.innerHTML = `${inputTextBottom.value}`
-    }
+    bottomText.innerHTML = `${inputTextBottom.value}`
+}
 
 // fin de escribir texto top y bottom
 
@@ -264,6 +289,45 @@ inputTextBottom.oninput = () => {
 //cheked fondo transparente 
 const inputTransparentBackground = document.getElementById('transparent-background')
 
+const transparentBackground = () => {
+    console.log(inputTransparentBackground.checked);
+    if (inputTransparentBackground.checked) {
+        containerTopText.style.backgroundColor = 'transparent'
+        containerBottomText.style.backgroundColor = 'transparent'
+    } else {
+        containerTopText.style.backgroundColor = `${inputColorBackgroudText.value}`
+        containerBottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
+    }
+}
+
+inputTransparentBackground.addEventListener('input', () => transparentBackground())
+
+// contorno del texto 
+const outlineNone = document.getElementById('text-outline-none')
+const outlineClear = document.getElementById('text-outline-clear')
+const outlineDark = document.getElementById('text-outline-dark')
+
+
+outlineClear.addEventListener('click', () => {
+    topText.classList.add('stroke-white')
+    bottomText.classList.add('stroke-white')
+    topText.classList.remove('stroke-black')
+    bottomText.classList.remove('stroke-black')
+})
+
+outlineDark.addEventListener('click', () => {
+    topText.classList.add('stroke-black')
+    bottomText.classList.add('stroke-black')
+    topText.classList.remove('stroke-white')
+    bottomText.classList.remove('stroke-white')
+})
+
+outlineNone.addEventListener('click', () => {
+    topText.classList.remove('stroke-black')
+    bottomText.classList.remove('stroke-black')
+    topText.classList.remove('stroke-white')
+    bottomText.classList.remove('stroke-white')
+})
 
 //espaciado
 const inputSpacing = document.getElementById('spacing-text')
@@ -271,3 +335,5 @@ const inputSpacing = document.getElementById('spacing-text')
 //FIN PANEL TEXTO
 
 //FIN DE PANELES
+
+
