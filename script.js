@@ -130,6 +130,16 @@ inputNegative.addEventListener('input', () => filters())
 //fin de filtros
 
 
+
+// boton de resetear filtros img
+const buttonResetFilters = document.getElementById('reset-filters')
+
+
+buttonResetFilters.addEventListener('click', () => {
+    imgMeme.style.filter = 'none'
+})
+
+
 // inicio de nombre input en  span del color fondo imagen
 const inputColorBackgroud = document.getElementById('color-background-img')
 const spanColor = document.getElementById('span-color')
@@ -141,7 +151,7 @@ const fondoMeme = () => {
 //elejir color del fondo de la imagen
 inputColorBackgroud.addEventListener('input', () => fondoMeme()); {
     inputColorBackgroud.oninput = () => {
-        imgMeme.style.background = `${inputColorBackgroud.value}`
+        imgMeme.style.backgroundColor = `${inputColorBackgroud.value}`
     }
 }
 // fin de nombre span del color fondo imagen
@@ -170,6 +180,8 @@ const hideTopText = () => {
     console.log(inputOffTopText.checked);
     if (inputOffTopText.checked) {
         containerTopText.classList.add('hidden')
+        // containerTopText.style.backgroundColor = 'transparent'
+        // containerTopText.style.position = 'absolute'
     } else {
         containerTopText.classList.remove('hidden')
     }
@@ -181,6 +193,8 @@ const hideBottomText = () => {
     console.log(inputOffBottomText.checked);
     if (inputOffBottomText.checked) {
         containerBottomText.classList.add('hidden')
+        // containerBottomText.style.backgroundColor = 'transparent'
+        // containerBottomText.style.position = 'absolute'
     } else {
         containerBottomText.classList.remove('hidden')
     }
@@ -286,21 +300,45 @@ inputTextBottom.oninput = () => {
 
 
 
-//cheked fondo transparente 
+
+
+
+
+//cheked fondo transparente /********///////////////////////////////////// */
 const inputTransparentBackground = document.getElementById('transparent-background')
 
 const transparentBackground = () => {
     console.log(inputTransparentBackground.checked);
     if (inputTransparentBackground.checked) {
-        containerTopText.style.backgroundColor = 'transparent'
-        containerBottomText.style.backgroundColor = 'transparent'
-    } else {
-        containerTopText.style.backgroundColor = `${inputColorBackgroudText.value}`
-        containerBottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
-    }
+        topText.style.position = 'absolute'
+        bottomText.style.position = 'absolute'
+      } else { 
+        topText.style.position = 'static'
+        bottomText.style.position = 'static'
+      }
 }
 
 inputTransparentBackground.addEventListener('input', () => transparentBackground())
+
+//$('top-text').style.position = 'absolute'
+// $('bottom-text').style.position = 'absolute'
+// } else {
+//   $('top-text').style.position = 'static'
+//   $('bottom-text').style.position = 'static'
+
+
+
+// if (inputTransparentBackground.checked) {
+//     topText.style.backgroundColor = 'transparent'
+//     bottomText.style.backgroundColor = 'transparent'
+//     containerTopText.style.position = 'absolute'
+//     containerBottomText.style.position = 'absolute'
+
+// } else {
+//     topText.style.backgroundColor = `${inputColorBackgroudText.value}`
+//     bottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
+    
+// }
 
 // contorno del texto 
 const outlineNone = document.getElementById('text-outline-none')
@@ -331,6 +369,11 @@ outlineNone.addEventListener('click', () => {
 
 //espaciado
 const inputSpacing = document.getElementById('spacing-text')
+
+inputSpacing.addEventListener('input', () => {
+    containerTopText.style.paddingBottom = `${inputSpacing.value}`
+    containerBottomText.style.paddingTop = `${inputSpacing.value}`
+})
 
 //FIN PANEL TEXTO
 
