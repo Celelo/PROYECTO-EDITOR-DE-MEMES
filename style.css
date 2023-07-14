@@ -81,42 +81,63 @@ button:hover {
     text-align: center;
 }
 
-.conteiner-meme {
+/* .conteiner-meme {
     width: 100%;
     height: 620px;
     justify-content: center;
     max-width: 650px;
-}
+    position: relative;
+} */
 
 .meme {
-    position: relative;
     display: flex;
-    flex-direction: column;
     width: 100%;
     max-width: 610px;
     height: 610px;
-    background-color: rgb(71, 218, 51);
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 
 
 div[class*="text-meme"] {
-    position: static;
+    /* position: static;
     padding: 25px 0px;
     font-size: 2.3em;
     font-weight: 900;
     color: black;
     background-color: white;
+    max-width: 610px;
+    align-items: center; */
+    font-family: Impact;
+    color: rgb(228, 12, 12);
+    background-color: rgb(255, 255, 255);
+    position: static;
+    font-size: 41px;
+}
+
+p {
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 35px 0px;
+    font-size: 40px;
+    font-weight: 800;
+    font-family: Verdana;
 }
 
 
 
 .img-meme {
-    height: 440px;
+    /* height: 440px;
     background-color: rgb(8, 8, 8);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    flex-grow: 1; */
     flex-grow: 1;
 }
 

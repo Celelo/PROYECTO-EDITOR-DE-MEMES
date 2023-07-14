@@ -210,6 +210,11 @@ inputOffBottomText.addEventListener('change', () => hideBottomText())
 const inputFontSize = document.getElementById('font-size')
 
 
+inputFontSize.addEventListener('input', () => {
+    topText.style.fontSize = `${inputFontSize.value}px`
+    bottomText.style.fontSize = `${inputFontSize.value}px`
+})
+
 
 // inicio de descarga meme por boton
 const meme = document.getElementById('container-meme')
@@ -231,7 +236,8 @@ const inputTextColor = document.getElementById('text-color')
 const fontSelector = document.getElementById('font-selector')
 
 const changeFontFamily = () => {
-    containerTopText.style.fontFamily = `${fontSelector.value}`
+    topText.style.fontFamily = `${fontSelector.value}`
+    bottomText.style.fontFamily = `${fontSelector.value}`
 }
 
 fontSelector.addEventListener('change', () => changeFontFamily())
@@ -276,8 +282,8 @@ const inputColorBackgroundText = () => {
 //elejir color de fondo del texto 
 inputColorBackgroudText.addEventListener('input', () => inputColorBackgroundText()); {
     inputColorBackgroudText.oninput = () => {
-        containerTopText.style.background = `${inputColorBackgroudText.value}`
-        containerBottomText.style.background = `${inputColorBackgroudText.value}`
+        topText.style.background = `${inputColorBackgroudText.value}`
+        bottomText.style.background = `${inputColorBackgroudText.value}`
     }
 
 }
@@ -310,11 +316,15 @@ const inputTransparentBackground = document.getElementById('transparent-backgrou
 const transparentBackground = () => {
     console.log(inputTransparentBackground.checked);
     if (inputTransparentBackground.checked) {
-        topText.style.position = 'absolute'
-        bottomText.style.position = 'absolute'
+        containerTopText.style.backgroundColor = 'transparent'
+        containerBottomText.style.backgroundColor = 'transparent'
+        containerTopText.style.position = 'absolute'
+        containerBottomText.style.position = 'absolute'
       } else { 
-        topText.style.position = 'static'
-        bottomText.style.position = 'static'
+        containerTopText.style.backgroundColor = `${inputColorBackgroudText.value}`
+        containerBottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
+        containerTopText.style.position = 'static'
+        containerBottomText.style.position = 'static'
       }
 }
 
@@ -367,13 +377,46 @@ outlineNone.addEventListener('click', () => {
     bottomText.classList.remove('stroke-white')
 })
 
-//espaciado
+//espaciado 
 const inputSpacing = document.getElementById('spacing-text')
 
 inputSpacing.addEventListener('input', () => {
-    containerTopText.style.paddingBottom = `${inputSpacing.value}`
-    containerBottomText.style.paddingTop = `${inputSpacing.value}`
+    topText.style.padding = `${inputSpacing.value}px`
+    bottomText.style.padding = `${inputSpacing.value}px`
 })
+
+
+//interlineado 
+const leading = document.getElementById('select-leading')
+
+leading.addEventListener('change', () => {
+    containerTopText.style.lineHeight = `${leading.value}`
+    containerBottomText.style.lineHeight = `${leading.value}`
+})
+
+
+
+
+//botones para mover texto 
+const buttonLeft = document.getElementById('button-left')
+const buttonCenter = document.getElementById('button-center')
+const buttonRight = document.getElementById('button-right')
+
+buttonLeft.addEventListener('click', () => {
+    topText.style.textAlign = 'left'
+    bottomText.style.textAlign = 'left'
+})
+
+buttonCenter.addEventListener('click', () => {
+    topText.style.textAlign = 'center'
+    bottomText.style.textAlign = 'center'
+})
+
+buttonRight.addEventListener('click', () => {
+    topText.style.textAlign = 'right'
+    bottomText.style.textAlign = 'right'
+})
+
 
 //FIN PANEL TEXTO
 

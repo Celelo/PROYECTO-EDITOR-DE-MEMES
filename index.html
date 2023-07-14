@@ -52,16 +52,15 @@
     <div class="conteiner-global">
         <!-- INICIO DE CONTENIDO PRINCIPAL -->
         <main class="main-conteiner">
-            <div class="conteiner-meme">
                 <div class="meme" id="container-meme">
-                    <div class="text-meme" id="container-top-text">
-                        <P id="top-text" class="">
+                    <div id="container-top-text">
+                        <P id="top-text" class="top text-meme">
                             top text
                         </P>
                     </div>
                     <div class="img-meme" id="meme-img"></div>
-                    <div class="text-meme" id="container-bottom-text">
-                        <P id="bottom-text" class="">
+                    <div  id="container-bottom-text">
+                        <P id="bottom-text" class=" text-meme buttom">
                             button text
                         </P>
                     </div>
@@ -70,7 +69,6 @@
                     <i class="fa-solid fa-download fa-shake "></i>
                     descargar imagen
                 </button>
-            </div>
         </main>
         <!-- FIN DE CONTENIDO PRINCIPAL -->
 
@@ -216,16 +214,16 @@
                     </select>
                     <!-- tamaño de fuentes -->
                     <div class="size-position-fonts">
-                        <input type="number" name="tamaño fuentes" aria-label="tamaño fuentes" id="font-size">
+                        <input type="number" name="tamaño fuentes" aria-label="tamaño fuentes" id="font-size" min="12" value="40">
                         <!-- alineacion de fuentes -->
                         <div>
-                            <button aria-label="alineacion de texto a la izquierda" class="buttons-alignment">
+                            <button aria-label="alineacion de texto a la izquierda" class="buttons-alignment" id="button-left">
                                 <i class="fa-solid fa-align-left"></i>
                             </button>
-                            <button aria-label="alineacion de texto al centro" class="buttons-alignment">
+                            <button aria-label="alineacion de texto al centro" class="buttons-alignment" id="button-center">
                                 <i class="fa-solid fa-align-center"></i>
                             </button>
-                            <button aria-label="alineacion de texto hacia la derecha" class="buttons-alignment">
+                            <button aria-label="alineacion de texto hacia la derecha" class="buttons-alignment" id="button-right">
                                 <i class="fa-solid fa-align-right"></i>
                             </button>
                         </div>
@@ -292,7 +290,7 @@
                     <h3>
                         interlineado
                     </h3>
-                    <select aria-label="interlineado">
+                    <select aria-label="interlineado" id="select-leading">
                         <option value="0.8">0.8</option>
                         <option value="1">1</option>
                         <option value="1.2">1.2</option>
