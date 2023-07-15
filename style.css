@@ -30,6 +30,7 @@ header {
     top: 0;
 }
 
+
 /* inicio modo oscuro/claro */
 header[class*="header-white"] {
     background-color: #c3cad6;
@@ -42,7 +43,7 @@ header[class*="header-white"] {
 /* fin modo oscuro/claro */
 
 .main-title {
-    padding: 15px 0px 20px 0px;
+    padding: 0;
     font-size: 3em;
 }
 
@@ -50,22 +51,37 @@ button {
     cursor: pointer;
     background-color: transparent;
     border: 0;
-}
-
-.buttom {
-    margin-right: 15px;
     font-size: 1.0em;
 }
 
-.button:hover {
-    padding: 5px;
+.container-buttoms {
+    margin: 10px;
+}
+
+.buttom {
+    padding: 4px;
+    margin: 2px 15px;
+    /* margin-right: 15px; */
+    font-size: 1.0em;
+}
+
+.buttom:hover {
     background-color: white;
-    border-radius: 10%;
+    border-radius: 500px;
+    transform: 1ms;
 }
 
 .hide-button {
     display: none;
 }
+/* hecho por celeste */
+span[class*="heart"] {
+    display: flex;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* FIN HEADER */
 
@@ -100,6 +116,7 @@ button {
     background-color: black;
     position: relative;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -113,11 +130,7 @@ div[class*="text-meme"] {
     background-color: white;
     max-width: 610px;
     align-items: center; */
-    font-family: Impact;
-    color: rgb(228, 12, 12);
-    background-color: rgb(255, 255, 255);
     position: static;
-    font-size: 41px;
 }
 
 p {
@@ -125,8 +138,8 @@ p {
     background: white;
     color: black;
     text-align: center;
-    padding: 22px 0px;
-    font-size: 40px;
+    padding: 20px 0px;
+    font-size: 2em;
     font-weight: 800;
     font-family: Verdana;
 }
@@ -165,13 +178,13 @@ p {
 }
 
 .aside {
-    width: 17%;
+    width: 18%;
     height: 100%;
     top: 0;
     z-index: 10;
     position: fixed;
     right: 0;
-    padding: 0px 10px;
+    padding: 0px 8px;
     overflow-x: auto;
 }
 
@@ -197,20 +210,20 @@ section[class*="aside-white"] {
 
 input[aria-label="url de imagen"] {
     margin: 10px 0px;
-    padding: 10px 10px;
+    padding: 10px 16px;
     border-radius: 5px;
     border: 0;
     outline: none;
-    background-color: #393e49;
+    background-color: #c3cad6;
 }
 
 input[aria-label="url de imagen"]:hover {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
 }
 
 input[aria-label="url de imagen"]:focus {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
 }
 
@@ -221,7 +234,7 @@ input[aria-label="url de imagen"]:focus {
 .container-color {
     display: flex;
     width: 50%;
-    background-color: #393e49;
+    background-color: #c3cad6;
     padding: 5px 0px;
     align-items: center;
     border-radius: 5px;
@@ -229,13 +242,13 @@ input[aria-label="url de imagen"]:focus {
 }
 
 .container-color:focus {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
 }
 
 select[aria-label="modos de estilo de imagen"] {
     border-radius: 5px;
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     width: 50%;
     outline: none;
@@ -243,12 +256,12 @@ select[aria-label="modos de estilo de imagen"] {
 }
 
 select[aria-label="modos de estilo de imagen"]:hover {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
 }
 
 select[aria-label="modos de estilo de imagen"]:focus {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
 }
 
@@ -264,10 +277,6 @@ input[type="range"] {
     background-color: transparent;
 }
 
-input[type="range"]:focus {
-    background-color: #484c53;
-    transition: 1ms;
-}
 
 input[type=range] {
     -webkit-appearance: none;
@@ -284,6 +293,11 @@ input[type=range]::-webkit-slider-runnable-track {
     border: 0px solid #000000;
 }
 
+input[type=range]::-webkit-slider-runnable-track:hover {
+    background-color: #6078a5;
+    transform: 1ms;
+}
+
 input[type=range]::-webkit-slider-thumb {
     border: 2px solid #383e4b;
     height: 22px;
@@ -298,7 +312,7 @@ input[type=range]::-webkit-slider-thumb {
 /* FIN FILTROS */
 
 .image-filter-button {
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     margin: 20px;
     padding: 7px;
@@ -306,12 +320,14 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .image-filter-button:hover {
-    background-color: #545b69;
+    background-color: #d0d8e6
+    ;
     transition: 1ms;
 }
 
 .image-filter-button:focus {
-    background-color: #545b69;
+    background-color: #d0d8e6
+    ;
     transition: 1ms;
 }
 
@@ -350,7 +366,7 @@ input[type="color"] {
 /* texto superior e inferior */
 input[placeholder=" TOP TEXT"],
 input[placeholder=" BOTTOM TEXT"] {
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 5px;
@@ -360,25 +376,25 @@ input[placeholder=" BOTTOM TEXT"] {
 }
 
 input[placeholder=" BOTTOM TEXT"]:hover {
-    background-color: #484c53;
-    transition: 1ms;
+    background-color: #d0d8e6;
+    transform: 1ms;
     cursor: pointer;
 }
 
 input[placeholder=" BOTTOM TEXT"]:focus {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
 }
 
 input[placeholder=" TOP TEXT"]:hover {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
 }
 
 input[placeholder=" TOP TEXT"]:focus {
-    background-color: #484c53;
+    background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
 }
@@ -395,12 +411,17 @@ label[for="off-top-text"] {
 
 /* fuentes familia */
 select[aria-label="familia fuentes"] {
-    padding: 7px 15px;
-    background-color: #393e49;
+    padding: 7px 23px;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     margin: 8px 0px 5px 0px;
     border-radius: 5px;
+}
+
+select[aria-label="familia fuentes"]:hover {
+    background-color: #d0d8e6;
+    transform: 1ms;
 }
 
 /* FUENTE */
@@ -412,22 +433,31 @@ select[aria-label="familia fuentes"] {
 input[name="tamaño fuentes"] {
     width: 45%;
     margin-right: 2px;
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 5px;
     text-align: center;
 }
 
+input[name="tamaño fuentes"]:hover {
+    background-color: #d0d8e6;
+    transform: 1ms;
+}
+
 /* alineacion de fuentes */
 .buttons-alignment {
-    padding: 5px;
     margin: 0;
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 2px;
     padding: 7px;
+}
+
+.buttons-alignment:hover {
+    background-color: #d0d8e6;
+    transform: 1ms;
 }
 
 /* color */
@@ -447,8 +477,8 @@ input[name="tamaño fuentes"] {
 .color-background {
     padding: 5px 0px;
     display: flex;
-    width: 85%;
-    background-color: #393e49;
+    width: 82%;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 5px;
@@ -471,12 +501,17 @@ label[ for="transparent-background"] {
 }
 
 .bottom-position {
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 3px;
-    padding: 7px 4px;
+    padding: 7px 9px;
     margin: 0;
+}
+
+.bottom-position:hover {
+    background-color: #d0d8e6;
+    transition: 1ms;
 }
 
 /* espaciado */
@@ -487,23 +522,33 @@ label[ for="transparent-background"] {
 input[aria-label="espaciado"] {
     width: 100%;
     height: 40px;
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 3px;
     margin-top: 5px;
 }
 
+input[aria-label="espaciado"]:hover {
+    background-color: #d0d8e6;
+    transition: 1ms;
+}
+
 /* interlineado */
 select[aria-label="interlineado"] {
     width: 100%;
     height: 40px;
-    background-color: #393e49;
+    background-color: #c3cad6;
     border: 0;
     outline: none;
     border-radius: 3px;
     margin-top: 5px;
     margin-bottom: 50px;
+}
+
+select[aria-label="interlineado"]:hover {
+    background-color: #d0d8e6;
+    transition: 1ms;
 }
 
 /* FIN PANEL TEXTO */
@@ -515,7 +560,7 @@ select[aria-label="interlineado"] {
     display: none;
 }
 
-.fa-bounce {
+i[class*="fa-xmark"] {
     margin-top: 10px;
     display: none;
 }
@@ -551,7 +596,7 @@ select[aria-label="interlineado"] {
         width: 40%;
     }
 
-    .icon-x {
+    i[class*="fa-xmark"] {
         display: flex;
     }
 }
@@ -573,8 +618,8 @@ select[aria-label="interlineado"] {
         height: 480px;
     }
     .main-title {
-        padding: 10px 0px 10px 0px;
-        font-size: 2.2em;
+        padding: 10px 0px 25px 0px;
+        font-size: 2em;
     }
     .buttom {
         margin-right: 15px;
