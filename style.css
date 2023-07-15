@@ -47,14 +47,17 @@ header[class*="header-white"] {
 }
 
 button {
-    margin-right: 15px;
-    font-size: 1.0em;
     cursor: pointer;
     background-color: transparent;
     border: 0;
 }
 
-button:hover {
+.buttom {
+    margin-right: 15px;
+    font-size: 1.0em;
+}
+
+.button:hover {
     padding: 5px;
     background-color: white;
     border-radius: 10%;
@@ -91,12 +94,11 @@ button:hover {
 
 .meme {
     display: flex;
-    width: 100%;
+    width: 70%;
     max-width: 610px;
-    height: 610px;
+    height: 510px;
     background-color: black;
     position: relative;
-    display: flex;
     flex-direction: column;
 }
 
@@ -123,7 +125,7 @@ p {
     background: white;
     color: black;
     text-align: center;
-    padding: 35px 0px;
+    padding: 22px 0px;
     font-size: 40px;
     font-weight: 800;
     font-family: Verdana;
@@ -132,12 +134,10 @@ p {
 
 
 .img-meme {
-    /* height: 440px;
     background-color: rgb(8, 8, 8);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    flex-grow: 1; */
     flex-grow: 1;
 }
 
@@ -145,7 +145,7 @@ p {
 
 
 .button-dowload {
-    margin: 50px;
+    margin-top: 25px;
     padding: 10px;
     background-color: green;
     border: 0;
@@ -515,7 +515,7 @@ select[aria-label="interlineado"] {
     display: none;
 }
 
-.fa-xmark {
+.fa-bounce {
     margin-top: 10px;
     display: none;
 }
@@ -559,5 +559,25 @@ select[aria-label="interlineado"] {
 @media (max-width:700px) {
     .aside {
         width: 100%;
+    }
+    .meme {
+        width: 72%;
+        height: 480px;
+    }
+}
+
+@media (max-width:450px) {
+    .meme {
+        width: 90%;
+        max-width: none;
+        height: 480px;
+    }
+    .main-title {
+        padding: 10px 0px 10px 0px;
+        font-size: 2.2em;
+    }
+    .buttom {
+        margin-right: 15px;
+        font-size: 12px;
     }
 }
