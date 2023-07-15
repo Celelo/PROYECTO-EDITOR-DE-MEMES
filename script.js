@@ -316,16 +316,16 @@ const inputTransparentBackground = document.getElementById('transparent-backgrou
 const transparentBackground = () => {
     console.log(inputTransparentBackground.checked);
     if (inputTransparentBackground.checked) {
-        containerTopText.style.backgroundColor = 'transparent'
-        containerBottomText.style.backgroundColor = 'transparent'
-        containerTopText.style.position = 'absolute'
-        containerBottomText.style.position = 'absolute'
-      } else { 
-        containerTopText.style.backgroundColor = `${inputColorBackgroudText.value}`
-        containerBottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
-        containerTopText.style.position = 'static'
-        containerBottomText.style.position = 'static'
-      }
+        topText.style.backgroundColor = 'transparent'
+        bottomText.style.backgroundColor = 'transparent'
+        topText.style.position = 'absolute'
+        bottomText.style.position = 'absolute'
+    } else { 
+        topText.style.backgroundColor = `${inputColorBackgroudText.value}`
+        bottomText.style.backgroundColor = `${inputColorBackgroudText.value}`
+        topText.style.position = 'static'
+        bottomText.style.position = 'static'
+}
 }
 
 inputTransparentBackground.addEventListener('input', () => transparentBackground())

@@ -130,18 +130,17 @@ div[class*="text-meme"] {
     background-color: white;
     max-width: 610px;
     align-items: center; */
-    position: static;
 }
 
-p {
+p[class*="text-meme"] {
     width: 100%;
     background: white;
     color: black;
     text-align: center;
-    padding: 20px 0px;
-    font-size: 2em;
+    padding: 17px 0px;
+    font-size: 2.3em;
     font-weight: 800;
-    font-family: Verdana;
+    position: static;
 }
 
 
