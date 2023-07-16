@@ -11,11 +11,15 @@ body {
 
 /* inicio modo oscuro/claro */
 body[class*="body-white"] {
-    background-color: #a2afc5;
+    background-color: #c0f5af;
 }
 
 .body-black {
-    background-color: #39527e;
+    background-image: url(imagenes/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* fin modo oscuro/claro */
@@ -33,11 +37,12 @@ header {
 
 /* inicio modo oscuro/claro */
 header[class*="header-white"] {
-    background-color: #c3cad6;
+    background-color: #a2d692;
 }
 
 .header-black {
-    background-color: #556a8d;
+    background-color: #12300f;
+    color: white;
 }
 
 /* fin modo oscuro/claro */
@@ -74,9 +79,19 @@ button {
 .hide-button {
     display: none;
 }
+
+.fa-a {
+    color: white;
+    display: none;
+}
+
+.fa-font {
+}
 /* hecho por celeste */
 span[class*="heart"] {
     display: flex;
+    position: fixed;
+    bottom: 0;
     font-size: 15px;
     padding: 0;
     margin: 0;
@@ -120,17 +135,6 @@ span[class*="heart"] {
 }
 
 
-
-div[class*="text-meme"] {
-    /* position: static;
-    padding: 25px 0px;
-    font-size: 2.3em;
-    font-weight: 900;
-    color: black;
-    background-color: white;
-    max-width: 610px;
-    align-items: center; */
-}
 
 p[class*="text-meme"] {
     width: 100%;
@@ -189,12 +193,12 @@ p[class*="text-meme"] {
 
 /* inicio modo oscuro/claro de imagen y texto*/
 section[class*="aside-white"] {
-    background-color: #837ea3;
+    background-color: #84b776;
 }
 
 .aside-black {
     color: white;
-    background-color: #4b3f97;
+    background-color: #24491e;
 }
 
 /* fin modo oscuro/claro imagen y texto*/
@@ -287,13 +291,13 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 14px;
     cursor: pointer;
-    background: #536991;
+    background: #636d80;
     border-radius: 14px;
     border: 0px solid #000000;
 }
 
 input[type=range]::-webkit-slider-runnable-track:hover {
-    background-color: #6078a5;
+    background-color: #687388;
     transform: 1ms;
 }
 
@@ -571,7 +575,6 @@ i[class*="fa-xmark"] {
 .stroke-black {
     text-align: center;
     font-family: impact;
-    font-size: 46px;
     text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
     -webkit-text-stroke: 2px black;
     } 
@@ -579,11 +582,38 @@ i[class*="fa-xmark"] {
 .stroke-white {
         text-align: center;
         font-family: impact;
-        font-size: 46px;
         text-shadow: -1px -1px 1px rgb(223, 213, 213), 1px 1px 1px rgb(223, 213, 213), -1px 1px 1px rgb(223, 213, 213), 1px -1px 1px 
         rgb(223, 213, 213);
         -webkit-text-stroke: 2px rgb(223, 213, 213);
         }
+
+/* imagenes gif meme */
+.img-meme-dog {
+    display: flex;
+    top: 0;
+    position: fixed ;
+    border-radius: 20px;
+}
+
+.spiderman-meme {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 600px;
+    left: 950px;
+    border-radius: 20px;
+}
+
+.elmo-meme {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 600px;
+    left: 350px;
+    border-radius: 20px;
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width:1300px) {
@@ -598,6 +628,18 @@ i[class*="fa-xmark"] {
     i[class*="fa-xmark"] {
         display: flex;
     }
+    .elmo-meme {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        bottom: 200px;
+        left: 20px;
+        border-radius: 20px;
+    }
+    .img-meme-dog {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media (max-width:700px) {
@@ -608,20 +650,73 @@ i[class*="fa-xmark"] {
         width: 72%;
         height: 480px;
     }
+    .elmo-meme {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        bottom: 200px;
+        left: 610px;
+        border-radius: 20px;
+    }
+    .img-meme-dog {
+        width: 60px;
+        height: 60px;
+        top: 60px;
+    }
+    span[class*="heart"] {
+        font-size: 10px;
+    }
 }
 
 @media (max-width:450px) {
     .meme {
+        margin-top: 20px;
         width: 90%;
         max-width: none;
         height: 480px;
     }
     .main-title {
-        padding: 10px 0px 25px 0px;
+        padding: 10px 0px 10px 0px;
         font-size: 2em;
     }
     .buttom {
         margin-right: 15px;
         font-size: 12px;
+    }
+    .button-dowload {
+        margin-top: 10px;
+        padding: 8px;
+    }
+    span[class*="heart"] {
+        position: fixed;
+    bottom: 550px;
+    left: 150px;
+    }
+    .img-meme-dog {
+        width: 40px;
+        height: 40px;
+        top: 80px;
+    }
+}
+
+
+@media (max-width:320px) {
+    .meme {
+        width: 80%;
+        max-width: none;
+        height: 400px;
+    }
+    .main-title {
+        padding: 10px 0px 10px 0px;
+        font-size: 1.5em;
+    }
+    span[class*="heart"] {
+        font-size: 8px;
+        bottom: 30px;
+        left: 0;
+    }
+    .buttom {
+        margin-right: 5px;
+        font-size: 8px;
     }
 }
