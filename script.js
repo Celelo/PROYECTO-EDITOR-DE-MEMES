@@ -272,11 +272,12 @@ const transparentBackground = () => {
         topText.style.backgroundColor = "transparent";
         bottomText.style.backgroundColor = "transparent";
         bottomText.style.bottom = "0px";
+        topText.style.top = "0px";
         topText.style.position = "absolute";
         bottomText.style.position = "absolute";
     } else {
-        topText.style.backgroundColor = `${inputColorBackgroudText.value}`;
-        bottomText.style.backgroundColor = `${inputColorBackgroudText.value}`;
+        topText.style.backgroundColor = 'white';
+        bottomText.style.backgroundColor = 'white';
         topText.style.position = "static";
         bottomText.style.position = "static";
     };
@@ -355,19 +356,6 @@ const modBody = document.getElementById('body-mods-colors');
 const botonWhite = document.getElementById('button-white');
 const botonBlack = document.getElementById('button-black');
 
-const modBlack = () => {
-    modHeader.classList.remove('header-white');
-    modHeader.classList.add('header-black');
-    modBody.classList.remove('body-white');
-    modBody.classList.add('body-black');
-    sectionImg.classList.remove('aside-white');
-    sectionText.classList.remove('aside-white');
-    sectionImg.classList.add('aside-black');
-    sectionText.classList.add('aside-black');
-    botonBlack.classList.add('hide-button');
-    botonWhite.classList.remove('hide-button');
-}
-
 const modWhite = () => {
     modHeader.classList.add('header-white');
     modHeader.classList.remove('header-black');
@@ -380,6 +368,19 @@ const modWhite = () => {
     botonBlack.classList.remove('hide-button');
     botonWhite.classList.add('hide-button');
 
+}
+
+const modBlack = () => {
+    modHeader.classList.remove('header-white');
+    modHeader.classList.add('header-black');
+    modBody.classList.remove('body-white');
+    modBody.classList.add('body-black');
+    sectionImg.classList.remove('aside-white');
+    sectionText.classList.remove('aside-white');
+    sectionImg.classList.add('aside-black');
+    sectionText.classList.add('aside-black');
+    botonBlack.classList.add('hide-button');
+    botonWhite.classList.remove('hide-button');
 }
 
 botonBlack.addEventListener('click', () => modBlack());

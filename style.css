@@ -11,7 +11,11 @@ body {
 
 /* inicio modo oscuro/claro */
 body[class*="body-white"] {
-    background-color: #c0f5af;
+    background-image: url(imagenes/backgroundwhite.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .body-black {
@@ -68,6 +72,7 @@ button {
     margin: 2px 15px;
     /* margin-right: 15px; */
     font-size: 1.0em;
+    color: #687388;
 }
 
 .buttom:hover {
