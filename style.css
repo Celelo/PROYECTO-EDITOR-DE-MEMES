@@ -709,16 +709,14 @@ i[class*="fa-xmark"] {
     .meme {
         width: 80%;
         max-width: none;
-        height: 400px;
+        height: 380px;
     }
     .main-title {
         padding: 10px 0px 10px 0px;
-        font-size: 1.5em;
+        font-size: 15px;
     }
     span[class*="heart"] {
         font-size: 8px;
-        bottom: 30px;
-        left: 0;
     }
     .buttom {
         margin-right: 5px;
