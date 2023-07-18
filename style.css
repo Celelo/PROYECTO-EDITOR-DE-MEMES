@@ -372,8 +372,8 @@ input[type="color"] {
 }
 
 /* texto superior e inferior */
-input[placeholder=" TOP TEXT"],
-input[placeholder=" BOTTOM TEXT"] {
+input[placeholder="TOP TEXT"],
+input[placeholder="BOTTOM TEXT"] {
     background-color: #c3cad6;
     border: 0;
     outline: none;
@@ -383,25 +383,25 @@ input[placeholder=" BOTTOM TEXT"] {
     height: 50px;
 }
 
-input[placeholder=" BOTTOM TEXT"]:hover {
+input[placeholder="BOTTOM TEXT"]:hover {
     background-color: #d0d8e6;
     transform: 1ms;
     cursor: pointer;
 }
 
-input[placeholder=" BOTTOM TEXT"]:focus {
+input[placeholder="BOTTOM TEXT"]:focus {
     background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
 }
 
-input[placeholder=" TOP TEXT"]:hover {
+input[placeholder="TOP TEXT"]:hover {
     background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
 }
 
-input[placeholder=" TOP TEXT"]:focus {
+input[placeholder="TOP TEXT"]:focus {
     background-color: #d0d8e6;
     transition: 1ms;
     cursor: pointer;
@@ -419,7 +419,8 @@ label[for="off-top-text"] {
 
 /* fuentes familia */
 select[aria-label="familia fuentes"] {
-    padding: 7px 23px;
+    width: 89%;
+    height: 30px;
     background-color: #c3cad6;
     border: 0;
     outline: none;
