@@ -621,6 +621,28 @@ i[class*="fa-xmark"] {
 
 
 /* RESPONSIVE */
+@media (max-width:1448px) {
+    .meme {
+        height: 425px;
+    }
+    .spiderman-meme {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        bottom: 530px;
+        left: 950px;
+        border-radius: 20px;
+    }
+    
+    .elmo-meme {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        bottom: 530px;
+        left: 350px;
+        border-radius: 20px;
+    }
+}
 
 @media (max-width:1300px) {
     section[class*="hidden-panel"] {
@@ -714,10 +736,10 @@ i[class*="fa-xmark"] {
     }
     .main-title {
         padding: 10px 0px 10px 0px;
-        font-size: 15px;
+        font-size: 25px;
     }
     span[class*="heart"] {
-        font-size: 8px;
+        display: none;
     }
     .buttom {
         margin-right: 5px;
